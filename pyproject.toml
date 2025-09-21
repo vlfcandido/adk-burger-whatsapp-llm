@@ -1,0 +1,21 @@
+
+[project]
+name = "hamburgueria-bot-adk-wpp"
+version = "0.1.0"
+description = "Bot de pedidos para hamburgueria via WhatsApp Cloud API — MVP hexagonal com LiteLLM"
+authors = [{name="ADK"}]
+requires-python = ">=3.11"
+dependencies = [
+    "Flask>=3.0.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.2.0",
+    "SQLAlchemy>=2.0.0",
+    "psycopg[binary,pool]>=3.1.18",
+    "structlog>=24.1.0",
+    "kink>=0.7.0",
+    "alembic>=1.13.1",
+]
+
+[tool.ruff]
+line-length = 100

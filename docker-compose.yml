@@ -1,0 +1,24 @@
+
+version: "3.9"
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: app
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+    ports: ["5432:5432"]
+  api:
+    build: .
+    env_file: .env
+    depends_on: [db]
+    environment:
+      HB_DATABASE_URL: postgresql+psycopg://app:app@db:5432/app
+      HB_LITELLM_BASE_URL: http://litellm:4000  # ajuste conforme seu gateway
+      HB_LITELLM_MODEL_PRIMARY: gpt-4o-mini
+      HB_LITELLM_MODEL_FALLBACK: gpt-4o-mini
+      HB_WHATSAPP_TOKEN: "CHAVE_AQUI"
+      HB_WHATSAPP_PHONE_NUMBER_ID: "PHONE_ID"
+      HB_APP_SECRET: "APP_SECRET"
+      HB_VERIFY_TOKEN: "VERIFY_TOKEN"
+    ports: ["8000:8000"]

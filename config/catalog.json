@@ -1,0 +1,79 @@
+{
+  "currency": "BRL",
+  "categories": [
+    {
+      "id": "burgers",
+      "name": "Burgers",
+      "items": [
+        {
+          "sku": "BX1",
+          "name": "Burger Clássico",
+          "price_cents": 2500,
+          "tags": [
+            "carne",
+            "pão",
+            "alface",
+            "tomate"
+          ],
+          "options": {
+            "ponto_da_carne": [
+              "mal passado",
+              "ao ponto",
+              "bem passado"
+            ]
+          }
+        },
+        {
+          "sku": "BX2",
+          "name": "Cheese Burger",
+          "price_cents": 2800,
+          "tags": [
+            "queijo"
+          ]
+        },
+        {
+          "sku": "BX3",
+          "name": "Duplo Bacon",
+          "price_cents": 3400,
+          "tags": [
+            "bacon",
+            "duplo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Acompanhamentos",
+      "items": [
+        {
+          "sku": "AC1",
+          "name": "Batata Média",
+          "price_cents": 1200,
+          "tags": [
+            "frita"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Bebidas",
+      "items": [
+        {
+          "sku": "RV1",
+          "name": "Refrigerante Lata",
+          "price_cents": 800,
+          "tags": [
+            "lata"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "customizations_allowed": true,
+    "delivery_estimate_min": 30,
+    "delivery_estimate_max": 60
+  }
+}
