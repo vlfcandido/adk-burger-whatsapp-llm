@@ -81,16 +81,6 @@ aplica **preflight** para cancelar respostas quando novas mensagens chegarem ant
 
 ---
 
-# Guia para Desenvolvedores (Júnior → Pleno)
-
-Este repositório é um **MVP orientado a LLM** para automatizar vendas de uma hamburgueria via WhatsApp:
-- **Coalescência** real (janela de inatividade + advisory locks)
-- **Roteamento por LLM** (PromptBuilder em PT-BR, com personas, políticas e exemplos)
-- **Agentes por domínio** (saudação, cardápio, carrinho, **endereço**, **pagamento/PIX**)
-- **Ferramentas (tools)** tipadas (Pydantic) executadas no servidor
-- **Transbordo humano (handoff)** por contato
-- **Logs JSON** + **eventos de auditoria** no banco
-- **/simulate** para testar sem WhatsApp Business
 
 ## Arquitetura (visão rápida)
 - `core/` — configuração, DI (kink), logging, PromptBuilder (Jinja2), LLMClient (LiteLLM + tool loop), coalescência.
